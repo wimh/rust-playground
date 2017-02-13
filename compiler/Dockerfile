@@ -26,7 +26,7 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
-ADD compiler /root/compiler
+ADD . /root/compiler
 WORKDIR /root/compiler
 
 ADD crontab /etc/cron.d/rust-playground-cron
