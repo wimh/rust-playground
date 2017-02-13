@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  cron:
+    build:
+      context: .
+      dockerfile: Dockerfile-cron
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+

@@ -1,0 +1,6 @@
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# rebuild every 15 minutes for testing purposes
+*/15 * * * * root cd /root/compiler && ./build.sh >> /var/log/cron.log 2>&1
+#0 0 * * * root cd /root/compiler && ./build.sh >> /var/log/cron.log 2>&1
+
