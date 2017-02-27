@@ -7,4 +7,13 @@ services:
       dockerfile: Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile-ui
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp:/tmp
+    ports:
+      - "80:80"
 
